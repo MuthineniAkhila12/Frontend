@@ -11,14 +11,14 @@ export default function Login() {
     e.preventDefault();
     
     if (!email.includes("@") || password.length < 6) {
-      setError("❌ Invalid email or password (min 6 chars)");
+      setError("Invalid email or password (min 6 chars)");
       setSuccess(false);
       return;
     }
     
     setError("");
     setSuccess(true);
-    alert("✅ Login Successful! 🎉");
+    alert("Login Successful! ");
   };
 
   return (
@@ -29,7 +29,7 @@ export default function Login() {
         </h2>
 
         {error && <p className="text-red-500 text-sm text-center mb-4">{error}</p>}
-        {success && <p className="text-green-500 text-sm text-center mb-4">✅ Login Successful!</p>}
+        {success && <p className="text-green-500 text-sm text-center mb-4">Login Successful!</p>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Email Field */}
